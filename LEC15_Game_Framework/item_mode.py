@@ -25,6 +25,10 @@ def handle_events():
         if event.type == SDL_QUIT:
             game_framework.quit()
             return
+        elif event.type == SDL_KEYDOWN and event.key in (SDLK_0, SDLK_1, SDLK_2):
+            play_mode.boy.selected_item = event.key - SDLK_0
+            game_framework.pop_mode()
+            return
         elif (event.type == SDL_KEYDOWN and
               event.key in (SDLK_i, SDLK_ESCAPE)):
             game_framework.pop_mode()
