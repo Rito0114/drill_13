@@ -31,7 +31,7 @@ def handle_events():
             return
 
 def update():
-    pass
+    play_mode.update()
 
 def render():
     clear_canvas()
